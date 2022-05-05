@@ -1,0 +1,191 @@
+<!-- This is the Program Memory System Simulator configuration file -->
+<PMS_ROOT>
+
+  <!-- <Simuli>
+    <Trace    value="icc_1000.txt,imc_1000.txt"/>
+    <Assembly value="ICC_IMC_1000.txt"/>
+  </Simuli> -->
+
+  
+  <!-- node_delay = throught delay  -->
+  
+  <Topology name = "PMS">
+    <!-- first step)  Bus description -->
+    <!-- Vtile0 -->
+    <Node name="core0_th0"         node_delay="0"    class="VLC"      node_higher_bus="None"            node_lower_bus="PBUS_core0_th0" node_lower_node="SIC_core0_th0"   />   
+    <Node name="SIC_core0_th0"     node_delay="0"    class="Cache"    node_higher_bus="PBUS_core0_th0"  node_lower_bus="L1toMI0_3"      node_lower_node="MI0_3" />
+    <Node name="core0_th1"         node_delay="0"    class="VLC"      node_higher_bus="None"            node_lower_bus="PBUS_core0_th1" node_lower_node="SIC_core0_th1"   />   
+    <Node name="SIC_core0_th1"     node_delay="0"    class="Cache"    node_higher_bus="PBUS_core0_th1"  node_lower_bus="L1toMI0_3"      node_lower_node="MI0_3" />
+    <Node name="core0_th2"         node_delay="0"    class="VLC"      node_higher_bus="None"            node_lower_bus="PBUS_core0_th2" node_lower_node="SIC_core0_th2"   />   
+    <Node name="SIC_core0_th2"     node_delay="0"    class="Cache"    node_higher_bus="PBUS_core0_th2"  node_lower_bus="L1toMI0_3"      node_lower_node="MI0_3" />
+    <Node name="core0_th3"         node_delay="0"    class="VLC"      node_higher_bus="None"            node_lower_bus="PBUS_core0_th3" node_lower_node="SIC_core0_th3"   />   
+    <Node name="SIC_core0_th3"     node_delay="0"    class="Cache"    node_higher_bus="PBUS_core0_th3"  node_lower_bus="L1toMI0_3"      node_lower_node="MI0_3" /> 
+    
+    <Node name="MI0_3"             node_delay="0"    class="Cache"    node_higher_bus="L1toMI0_3"       node_lower_bus="L1toL2AXI"      node_lower_node="L2Cache" />
+    
+    <Node name="core0_th4"         node_delay="0"    class="VLC"      node_higher_bus="None"            node_lower_bus="PBUS_core0_th4" node_lower_node="SIC_core0_th4"   />   
+    <Node name="SIC_core0_th4"     node_delay="0"    class="Cache"    node_higher_bus="PBUS_core0_th4"  node_lower_bus="L1toMI4_7"      node_lower_node="MI4_7" />
+    <Node name="core0_th5"         node_delay="0"    class="VLC"      node_higher_bus="None"            node_lower_bus="PBUS_core0_th5" node_lower_node="SIC_core0_th5"   />   
+    <Node name="SIC_core0_th5"     node_delay="0"    class="Cache"    node_higher_bus="PBUS_core0_th5"  node_lower_bus="L1toMI4_7"      node_lower_node="MI4_7" />
+    <Node name="core0_th6"         node_delay="0"    class="VLC"      node_higher_bus="None"            node_lower_bus="PBUS_core0_th6" node_lower_node="SIC_core0_th6"   />   
+    <Node name="SIC_core0_th6"     node_delay="0"    class="Cache"    node_higher_bus="PBUS_core0_th6"  node_lower_bus="L1toMI4_7"      node_lower_node="MI4_7" />
+    <Node name="core0_th7"         node_delay="0"    class="VLC"      node_higher_bus="None"            node_lower_bus="PBUS_core0_th7" node_lower_node="SIC_core0_th7"   />   
+    <Node name="SIC_core0_th7"     node_delay="0"    class="Cache"    node_higher_bus="PBUS_core0_th7"  node_lower_bus="L1toMI4_7"      node_lower_node="MI4_7" /> 
+    
+    <Node name="MI4_7"             node_delay="0"    class="Cache"    node_higher_bus="L1toMI4_7"       node_lower_bus="L1toL2AXI"      node_lower_node="L2Cache" />
+    
+    <Node name="core0_th8"         node_delay="0"    class="VLC"      node_higher_bus="None"            node_lower_bus="PBUS_core0_th8" node_lower_node="SIC_core0_th8"   />   
+    <Node name="SIC_core0_th8"     node_delay="0"    class="Cache"    node_higher_bus="PBUS_core0_th8"  node_lower_bus="L1toMI8_11"      node_lower_node="MI8_11" />
+    <Node name="core0_th9"         node_delay="0"    class="VLC"      node_higher_bus="None"            node_lower_bus="PBUS_core0_th9" node_lower_node="SIC_core0_th9"   />   
+    <Node name="SIC_core0_th9"     node_delay="0"    class="Cache"    node_higher_bus="PBUS_core0_th9"  node_lower_bus="L1toMI8_11"      node_lower_node="MI8_11" />
+    <Node name="core0_th10"        node_delay="0"    class="VLC"      node_higher_bus="None"            node_lower_bus="PBUS_core0_th10" node_lower_node="SIC_core0_th10"   />   
+    <Node name="SIC_core0_th10"    node_delay="0"    class="Cache"    node_higher_bus="PBUS_core0_th10"  node_lower_bus="L1toMI8_11"      node_lower_node="MI8_11" />
+    <Node name="core0_th11"        node_delay="0"    class="VLC"      node_higher_bus="None"            node_lower_bus="PBUS_core0_th11" node_lower_node="SIC_core0_th11"   />   
+    <Node name="SIC_core0_th11"    node_delay="0"    class="Cache"    node_higher_bus="PBUS_core0_th11"  node_lower_bus="L1toMI8_11"      node_lower_node="MI8_11" /> 
+    
+    <Node name="MI8_11"            node_delay="0"    class="Cache"    node_higher_bus="L1toMI8_11"       node_lower_bus="L1toL2AXI"      node_lower_node="L2Cache" />
+
+    <Node name="core0_th12"        node_delay="0"    class="VLC"      node_higher_bus="None"            node_lower_bus="PBUS_core0_th12" node_lower_node="SIC_core0_th12"   />   
+    <Node name="SIC_core0_th12"    node_delay="0"    class="Cache"    node_higher_bus="PBUS_core0_th12"  node_lower_bus="L1toMI12_15"      node_lower_node="MI12_15" />
+    <Node name="core0_th13"        node_delay="0"    class="VLC"      node_higher_bus="None"            node_lower_bus="PBUS_core0_th13" node_lower_node="SIC_core0_th13"   />   
+    <Node name="SIC_core0_th13"    node_delay="0"    class="Cache"    node_higher_bus="PBUS_core0_th13"  node_lower_bus="L1toMI12_15"      node_lower_node="MI12_15" />
+    <Node name="core0_th14"        node_delay="0"    class="VLC"      node_higher_bus="None"            node_lower_bus="PBUS_core0_th14" node_lower_node="SIC_core0_th14"   />   
+    <Node name="SIC_core0_th14"    node_delay="0"    class="Cache"    node_higher_bus="PBUS_core0_th14"  node_lower_bus="L1toMI12_15"      node_lower_node="MI12_15" />
+    <Node name="core0_th15"        node_delay="0"    class="VLC"      node_higher_bus="None"            node_lower_bus="PBUS_core0_th15" node_lower_node="SIC_core0_th15"   />   
+    <Node name="SIC_core0_th15"    node_delay="0"    class="Cache"    node_higher_bus="PBUS_core0_th15"  node_lower_bus="L1toMI12_15"      node_lower_node="MI12_15" /> 
+    
+    <Node name="MI12_15"           node_delay="0"    class="Cache"    node_higher_bus="L1toMI12_15"       node_lower_bus="L1toL2AXI"      node_lower_node="L2Cache" />
+    
+    <Node name="L2Cache"           node_delay="0"    class="Cache"    node_higher_bus="L1toL2AXI"     node_lower_bus="AXI"     node_lower_node="EMI"     />
+    <Node name="EMI"               node_delay="10"   class="TCM"      node_higher_bus="AXI"           node_lower_bus="None"    node_lower_node="None"    />
+    <!-- second step) Node description -->
+    <!-- multiaccess= the ability of arbitration to any Node -->
+    
+    <Bus  name="L1toMI0_3"         bus_delay="0"     multi_access="1"  />
+    <Bus  name="L1toMI4_7"         bus_delay="0"     multi_access="1"  />
+    <Bus  name="L1toMI8_11"        bus_delay="0"     multi_access="1"  />
+    <Bus  name="L1toMI12_15"       bus_delay="0"     multi_access="1"  />
+    
+    <Bus  name="PBUS_core0_th0"   bus_delay="0"     multi_access="1"  />
+    <Bus  name="PBUS_core0_th1"   bus_delay="0"     multi_access="1"  />
+    <Bus  name="PBUS_core0_th2"   bus_delay="0"     multi_access="1"  />
+    <Bus  name="PBUS_core0_th3"   bus_delay="0"     multi_access="1"  />
+    <Bus  name="PBUS_core0_th4"   bus_delay="0"     multi_access="1"  />
+    <Bus  name="PBUS_core0_th5"   bus_delay="0"     multi_access="1"  />
+    <Bus  name="PBUS_core0_th6"   bus_delay="0"     multi_access="1"  />
+    <Bus  name="PBUS_core0_th7"   bus_delay="0"     multi_access="1"  />
+    <Bus  name="PBUS_core0_th8"   bus_delay="0"     multi_access="1"  />
+    <Bus  name="PBUS_core0_th9"   bus_delay="0"     multi_access="1"  />
+    <Bus  name="PBUS_core0_th10"  bus_delay="0"     multi_access="1"  />
+    <Bus  name="PBUS_core0_th11"  bus_delay="0"     multi_access="1"  />
+    <Bus  name="PBUS_core0_th12"  bus_delay="0"     multi_access="1"  />
+    <Bus  name="PBUS_core0_th13"  bus_delay="0"     multi_access="1"  />
+    <Bus  name="PBUS_core0_th14"  bus_delay="0"     multi_access="1"  />
+    <Bus  name="PBUS_core0_th15"  bus_delay="0"     multi_access="1"  />
+    <Bus  name="L1toL2AXI"        bus_delay="0"     multi_access="1"  />
+    <Bus  name="AXI"              bus_delay="0"     multi_access="1"  OutsdngTCM="16"/>
+  </Topology>
+
+  <!-- VLC config between VLC_start and VLC_end -->
+  <VLC>
+    <defult>
+      <depth      value="2"  />
+      <entrysize  value="16" />        <!-- Bytes -->
+      <outsdng    value="2"  />        <!-- outsdng number -->
+      <Trace_idx  value="0"  />
+    </defult>
+
+    <core0_th0>
+      <Trace_idx  value="0"/>
+    </core0_th0>
+    <core0_th1>
+      <Trace_idx  value="1"/>
+    </core0_th1>
+    <core0_th2>
+      <Trace_idx  value="0"/>
+    </core0_th2>
+    <core0_th3>
+      <Trace_idx  value="1"/>
+    </core0_th3>
+    <core0_th4>
+      <Trace_idx  value="0"/>
+    </core0_th4>
+    <core0_th5>
+      <Trace_idx  value="1"/>
+    </core0_th5>
+    <core0_th6>
+      <Trace_idx  value="0"/>
+    </core0_th6>
+    <core0_th7>
+      <Trace_idx  value="1"/>
+    </core0_th7>
+  </VLC>
+
+  <!-- VLC config between VLC_start and VLC_end -->
+  <TCM>
+    <!-- <defult>
+      <TCMdelay   value="10"  />
+    </defult>
+
+    <EMI>
+      <TCMdelay   value="0"  />
+    </EMI> -->
+    
+  </TCM>  
+  
+
+  <!-- cache config between Cache_start and Cache_end -->
+  <Cache>
+    <defult>
+      <cachesize    value="16x128"/>
+      <assoc        value="1"      />      <!-- 1 for direct mapped   -->
+      <blocksize    value="32"    />      <!-- Bytes                 -->
+      <subblocksize value="16"     />      <!-- Bytes                 -->
+      <!-- <hitdelay     value="1"      />      cycle                 -->
+      <!-- <misspenalty  value="20"     />      cycle                 -->
+      <replacement  value="1"      />      <!-- 0:RR  1:LRU  2:RANDOM -->
+      <prefetch     value="0"      />
+      <!-- <outsdng      value="2"      />-->      <!-- outsdng number -->
+      <alwaysMiss   value="0"      />
+      
+    </defult>
+    
+    <MI0_3>
+      <cachesize    value="32"     />
+      <blocksize    value="32"     />      <!-- MI need to alige to upper cache -->
+      <subblocksize value="16"     />      <!-- MI need to alige to upper cache -->
+      <alwaysMiss   value="1"      />
+    </MI0_3>
+
+    <MI4_7>
+      <cachesize    value="32"     />
+      <blocksize    value="32"     />      <!-- MI need to alige to upper cache -->
+      <subblocksize value="16"     />      <!-- MI need to alige to upper cache -->
+      <alwaysMiss   value="1"      />
+    </MI4_7>
+
+    <MI8_11>
+      <cachesize    value="32"     />
+      <blocksize    value="32"     />      <!-- MI need to alige to upper cache -->
+      <subblocksize value="16"     />      <!-- MI need to alige to upper cache -->
+      <alwaysMiss   value="1"      />
+    </MI8_11>    
+    
+    <MI12_15>
+      <cachesize    value="32"     />
+      <blocksize    value="32"     />      <!-- MI need to alige to upper cache -->
+      <subblocksize value="16"     />      <!-- MI need to alige to upper cache -->
+      <alwaysMiss   value="1"      />
+    </MI12_15>
+    
+    <L2Cache>
+      <cachesize    value="64x128" />
+      <blocksize    value="128"    />      <!-- Bytes                 -->
+      <assoc        value="1"      />      <!-- 1 for direct mapped   -->
+
+      <prefetch     value="0"      />
+    </L2Cache>
+
+  </Cache>
+
+</PMS_ROOT>
